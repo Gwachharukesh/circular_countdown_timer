@@ -424,4 +424,12 @@ class CountDownController {
     }
     return "";
   }
+
+    bool setTime(int time) {
+    if (_state != null && _state?._controller != null) {
+          _state!._controller!.duration = Duration(seconds: time);
+          return true;
+    }
+    return false;
+  }
 }
